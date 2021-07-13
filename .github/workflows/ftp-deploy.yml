@@ -11,7 +11,8 @@ jobs:
     - name: Upload ftp
       uses: sebastianpopp/ftp-action@releases/v2
       with:
-        host: ${{ secrets.w00ed3d0.kasserver.com }}
-        user: ${{ secrets.f01413f7 }}
-        password: ${{ secrets.CjJrjqWw2xEMZgWe }}
+        host: w00ed3d0.kasserver.com
+        user: f01413f7
+        password: CjJrjqWw2xEMZgWe
+        forceSsl : "true"
         options: "--delete --asci"
