@@ -15,4 +15,5 @@ jobs:
         user: f01413f7
         password: CjJrjqWw2xEMZgWe
         forceSsl : "true"
+        localDir: "dist"
         options: "--delete --asci"
