@@ -1,0 +1,17 @@
+# This is a custom workflow to deploy the repo to an remote sever via ftp
+
+name:  FTP Deploy action
+on: push
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Upload ftp
+      uses: sebastianpopp/ftp-action@releases/v2
+      with:
+        host: ${{ secrets.w00ed3d0.kasserver.com }}
+        user: ${{ secrets.f01413f7 }}
+        password: ${{ secrets.CjJrjqWw2xEMZgWe }}
+        options: "--delete --asci"
