@@ -1,0 +1,5 @@
+# Verzeichnissschutz
+AuthType Basic
+AuthName "Geben Se Ihre Zugangsdaten ein"
+AuthUserFile /kunden/homepages/17/d736361331/htdocs/gamueller/.htpasswd
+require user dev
