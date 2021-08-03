@@ -6,14 +6,18 @@ jobs:
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
+    env:
+      FTP_HOST: ${{ secrets.FTP_HOST }}
+      FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+      FTP_USER: ${{ secrets.FTP_USER }}
     steps:
     - uses: actions/checkout@v2
     - name: Upload ftp
       uses: sebastianpopp/ftp-action@releases/v2
       with:
-        host: w00ed3d0.kasserver.com
-        user: f01413f7
-        password: CjJrjqWw2xEMZgWe
+        host: $FTP_HOST
+        user: $FTP_USER
+        password: $FTP_PASSWORD
         forceSsl : "true"
         localDir: "dist"
         options: "--delete --asci"
