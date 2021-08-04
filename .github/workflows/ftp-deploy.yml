@@ -11,13 +11,13 @@ jobs:
     - name: Upload ftp
       uses: sebastianpopp/ftp-action@releases/v2
       with:
-        env:
-          FTP_HOST: ${{ secrets.FTP_HOST }}
-          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
-          FTP_USER: ${{ secrets.FTP_USER }}
         host: $FTP_HOST
         user: $FTP_USER
         password: $FTP_PASSWORD
         forceSsl : "true"
         localDir: "dist"
         options: "--delete --asci"
+      env:
+          FTP_HOST: ${{ secrets.FTP_HOST }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+          FTP_USER: ${{ secrets.FTP_USER }}
