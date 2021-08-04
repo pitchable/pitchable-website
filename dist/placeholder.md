@@ -1,1 +1,1 @@
-# There has to be something in the folder otherwise git will just ignore its existance.
+# There has to be something in the folder otherwise git will just ignore its existance
